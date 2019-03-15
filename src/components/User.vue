@@ -9,11 +9,15 @@
 </template>
 
 <script>
+// import to use .
 import moment from 'moment';
 
 export default {
   name: 'User',
+  // props use to store or act as model
   props: ['detail'],
+
+  // filter
   filters: {
     formatDob(value) {
       if (value) {
@@ -27,7 +31,11 @@ export default {
 
 <style scoped>
 .user {
+  color: darkturquoise;
+  background-color: white;
+  opacity: 0.9;
   border: 5px;
-  padding: 10px;
+  border-radius: 30px;
+  padding: 20px;
 }
 </style>
