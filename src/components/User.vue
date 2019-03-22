@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="user">
-<p>Name:{{detail.name}}</p>
-<p>About:{{detail.about}}</p>
+<p>{{detail.name}}</p>
+<p>{{detail.about}}</p>
 <p>Dob:{{detail.dob | formatDob}}</p>
 </div>
     </div>
@@ -10,22 +10,22 @@
 
 <script>
 // import to use .
-import moment from 'moment';
+import moment from "moment";
 
 export default {
-  name: 'User',
+  name: "User",
   // props use to store or act as model
-  props: ['detail'],
+  props: ["detail"],
 
   // filter
   filters: {
     formatDob(value) {
       if (value) {
-        return moment(value).format('Do MMMM YYYY,dddd');
+        return moment(value).format("Do MMMM YYYY,dddd");
       }
-      return 'No date found';
-    },
-  },
+      return "No date found";
+    }
+  }
 };
 </script>
 
